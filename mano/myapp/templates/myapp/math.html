@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>
+        SERVERSIDE 
+    </title>
+    <style>
+        .box
+        {
+            padding:  60px;
+            padding-left: 5px;
+            background-color: cyan (0, 0, 0);
+            border: double 10px rgb(20, 187, 23);
+            line-height: 20px;
+            width: 200;
+            font-size: 20px;
+            color:rgb(26, 48, 189);
+            position: fixed;
+            top: 150px;
+            left:600px;
+
+        }
+        .object
+        {
+            border: 5px dashed rgb(15, 206, 53);
+            padding: 40px;
+            background-color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <form method="post">
+        <div class="box">
+        <h4>MANORAJAPRIYAN.L.E </h4>
+        <h4>212225040227</h4>
+        {% csrf_token %}   
+            <div class="objec1">
+                <label >PRICE </label>
+                in(<span>&#8377;</span >)</label>
+
+                <input type="number" name="Price" value="{{p}}" placeholder="Enter PRICE ">
+                <br>
+                
+                <label>GST</label>
+                <input type="text" name="GST" value="{{gst}}" placeholder="Enter GST">
+                <br>
+
+                <input type="submit" value="calculate"> 
+                <br>
+                <label>Bill</label><input type="text" value="{{ bill }}">
+
+            </div>
+     </form>
+</body>
+</html>
